@@ -24,7 +24,6 @@ def extract_par_lines(text: str) -> list[str]:
     """
     out: list[str] = []
     for line in text.splitlines():
-        # CHAT lines sometimes have leading spaces; be robust
         s = line.lstrip()
         if s.startswith("*PAR:"):
             # Remove prefix and normalize whitespace around content
